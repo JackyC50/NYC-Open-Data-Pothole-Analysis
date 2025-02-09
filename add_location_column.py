@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Step 1: Load the dataset
-file_path = '2024_nyc_311_data_test2.csv' # Update this with your file path
+file_path = 'raw_nyc_311_data.csv' # Update this with your file path
 df = pd.read_csv(file_path)
 
 # Step 2: Define a function to create the location column dynamically
@@ -23,7 +23,7 @@ def determine_location(row):
 df["location"] = df.apply(determine_location, axis=1)
 
 # Step 4: Save the updated DataFrame to a new CSV file
-output_path = 'updated_nyc_311_data.csv'  # Update this with your desired file path
+output_path = 'data_with_location_column.csv'  # Update this with your desired file path
 df.to_csv(output_path, index=False)
 
 print(f"Updated dataset saved to: {output_path}")
