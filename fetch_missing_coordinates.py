@@ -59,7 +59,7 @@ for index, row in df.iterrows():
                 print(f"Progress saved after {api_calls} API calls.")
 
 # Step 6: Save the final updated dataset to a new CSV file
-output_path = 'data_with_coordinates.csv.csv'
+output_path = 'data_with_coordinates.csv'
 df.to_csv(output_path, index=False)
 
 # Delete the temporary file after successful completion
