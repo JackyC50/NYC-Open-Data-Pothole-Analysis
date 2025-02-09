@@ -3,7 +3,7 @@ import geopandas as gpd
 from shapely.geometry import Point
 
 # Step 1: Load your dataset
-data_path = 'file_with_coordinates.csv'  # Path to your dataset
+data_path = 'data_with_coordinates.csv'  # Path to your dataset
 df = pd.read_csv(data_path)
 
 # Ensure the dataset has latitude and longitude columns
@@ -38,7 +38,7 @@ else:
     raise KeyError("Column 'boro_cd' not found in the spatial join result. Check the shapefile column names.")
 
 # Step 7: Save the updated dataset to a new CSV file
-output_path = 'file_with_gis_community_boards.csv'
+output_path = 'data_with_gis_community_boards'
 df.to_csv(output_path, index=False)
 
 print(f"Updated dataset saved to: {output_path}")
