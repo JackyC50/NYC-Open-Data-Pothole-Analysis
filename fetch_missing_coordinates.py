@@ -9,7 +9,7 @@ if os.path.exists(temp_path):
     print(f"Resuming from the last saved progress: {temp_path}")
     df = pd.read_csv(temp_path)  # Load the partially updated dataset
 else:
-    file_path = 'updated_nyc_311_data.csv'  # Original dataset
+    file_path = 'data_with_location_column.csv'  # Original dataset
     print(f"Starting from the original file: {file_path}")
     df = pd.read_csv(file_path)  # Load the original dataset
 
@@ -59,7 +59,7 @@ for index, row in df.iterrows():
                 print(f"Progress saved after {api_calls} API calls.")
 
 # Step 6: Save the final updated dataset to a new CSV file
-output_path = 'file_with_coordinates.csv'
+output_path = 'data_with_coordinates.csv.csv'
 df.to_csv(output_path, index=False)
 
 # Delete the temporary file after successful completion
