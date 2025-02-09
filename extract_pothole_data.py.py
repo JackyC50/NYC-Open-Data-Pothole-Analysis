@@ -47,8 +47,8 @@ column_names = ['unique_key', 'created_date', 'closed_date', 'complaint_type', '
                'latitude','longitude']
 
 # Define the file paths
-csv_file = "2024_nyc_311_data_test2.csv"
-progress_file = "download_progressTest2.txt"
+csv_file = "raw_nyc_311_data.csv"
+progress_file = "data_download_log.txt"
 
 # Function to get the last saved offset (if any)
 def get_last_offset():
